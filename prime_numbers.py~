@@ -1,0 +1,26 @@
+# prime numbers
+def is_prime(n):
+    #n = int(input("type in the number you want to find whether prime or not: "))
+    if n < 0:
+        #print("cannot process negative numbers")
+	return false
+    if n == 0:
+        print("0 is a completely different number")
+    if n == 1:
+        print("1 is a prime")
+    if n == 2:
+        print("2 is a prime and the only even prime number")
+    elif n % 2 == 0:
+        print(n, "is an even number hence non prime")
+    elif n % 2 != 0:
+        for p in range(2, n - 1):
+            if n % p == 0:
+                print("Number is not prime")
+                return 1
+
+    print("Number is prime")
+    return 0
+
+
+result = prime()
+print(result)
